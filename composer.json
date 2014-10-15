@@ -1,6 +1,5 @@
 {
     "name": "pfaffenbauer/bootstrap",
-    "version" : "0.0.1",
     "type": "pimcore-plugin",
     "license": "Simple BSD",
     "description": "Adds Bootstrap JS and CSS Files and some Area-Bricks",
