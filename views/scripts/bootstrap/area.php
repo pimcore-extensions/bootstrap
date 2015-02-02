@@ -3,7 +3,8 @@
     $excludeBricks = $this->excludeBricks;
     $extraBricks = $this->extraBricks;
     $name = $this->name; if(!$this->name) $this->name = "default";
-
+    $params = array();
+    
     $bricks = $defaultBricks;
 
     foreach($excludeBricks as $brick)
@@ -21,11 +22,18 @@
             $bricks[] = $brick;
         }
     }
+    
+    foreach($bricks as $brick)
+    {
+        $params[$brick] = array(
+            "forceEditInView" => true
+        );
+    }
 
 ?>
 
 <?php echo $this->areablock("c" . $name, array(
         "allowed" => $bricks,
-        "forceEditInView" => true
+        "params" => $params
     ));
 ?>

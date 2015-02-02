@@ -1,3 +1,13 @@
+<?
+    if($this->editmode)
+    {
+        ?><br/><br/><br/><?
+    }
+    
+    $class = $this->input("extraClass")->text;
+?>
 <div class="row">
-    <?=$this->image("contentImage", array("thumbnail" => "contentImage", "class" => "img-responsive"));?>
+    <div class="col-xs-12">
+        <?=$this->image("ci", array("thumbnail" => "contentImage", "class" => "img-responsive " . $class, "height" => 200));?>
+    </div>
 </div>

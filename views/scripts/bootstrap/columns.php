@@ -23,8 +23,12 @@ if($this->editmode)
     if($this->select("type")->isEmpty()){
          $this->select("type")->setDataFromResource("column_12");
     }
-
-    echo $this->select("type", array("reload" => true, "store" => $store));
+    ?>
+    
+    <div class="col-xs-12">
+        <?=$this->select("type", array("reload" => true, "store" => $store));?>
+    </div>
+    <?
 }
 
 $type = $this->select("type")->getData();
