@@ -1,10 +1,10 @@
 {
-    "name": "pfaffenbauer/bootstrap",
+    "name": "pimcore-extensions/bootstrap",
     "type": "pimcore-plugin",
     "license": "Simple BSD",
     "description": "Adds Bootstrap JS and CSS Files and some Area-Bricks",
     "keywords": ["pimcore","bootstrap"],
-    "homepage": "https://github.com/dpfaffenbauer/pimcore-bootstrap",
+    "homepage": "https://github.com/pimcore-extensions/bootstrap",
     "authors": [
         {
             "name": "Dominik Pfaffenbauer",
