@@ -22,7 +22,6 @@ class Plugin extends AbstractPlugin implements PluginInterface
         /** @var \Pimcore\View $view */
         $view = $front->view;
         $view->addScriptPath(PIMCORE_PLUGINS_PATH . '/Bootstrap/views/scripts');
-        $view->addHelperPath(PIMCORE_PLUGINS_PATH . '/Bootstrap/lib/Bootstrap/View/Helper', '\\Bootstrap\\View\\Helper\\');
     }
 
     public static function isInstalled()
