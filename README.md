@@ -12,7 +12,7 @@ Using Composer:
 composer require pimcore-extensions/bootstrap
 ```
 
-Composer will automatically copy the area files into your `website/var/areas` directory.
+Pimcore will automatically copy the area files into your `website/var/areas` directory when you enable them in the admin.
 
 Next, you'll have to make the views available. You can either copy the folders inside `views/scripts` into 
 `website/views/scripts` or otherwise:
