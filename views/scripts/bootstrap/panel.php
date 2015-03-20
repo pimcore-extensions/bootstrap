@@ -29,6 +29,6 @@
     </div>
     <? } ?>
     <div class="panel-body">
-        <?=$this->template("helper/area.php", array("name" => "panel-" . $this->brick->getIndex(), "params" => array(), "excludeBricks" => array()))?>
+        <?=$this->template("helper/areablock.php", array("name" => "panel-" . $this->brick->getIndex(), "params" => array(), "excludeBricks" => array()))?>
     </div>
 </div>

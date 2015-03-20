@@ -49,7 +49,7 @@
                 <? if($this->editmode) {?>
                     <h2>Slide <?=($i+1)?></h2>
                 <? } ?>
-                <?= $this->template("helper/area.php", array("name" => "s-" . $i, "params" => array("image" => array("class" => "pull-right")))); ?>
+                <?= $this->template("helper/areablock.php", array("name" => "s-" . $i, "params" => array("image" => array("class" => "pull-right")))); ?>
             </div>
             <? } ?>
         </div>

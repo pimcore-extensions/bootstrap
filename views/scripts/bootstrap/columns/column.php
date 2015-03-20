@@ -8,7 +8,7 @@
         $name = "cs" . $column . "_" . $i;
     ?>
     <div class="col-md-<?=$column?> col-sm-<?=$column?> col-xs-12 <?=$type?>">
-        <?=$this->template("helper/area.php", array("name" => $name))?>
+        <?=$this->template("helper/areablock.php", array("name" => $name))?>
     </div>
     
     <? $i++; ?>

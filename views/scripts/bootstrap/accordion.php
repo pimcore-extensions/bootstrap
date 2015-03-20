@@ -32,7 +32,7 @@
         </div>
         <div id="collapse<?=$this->brick->getId().$this->brick->getIndex()?>" class="panel-collapse collapse <?=$this->editmode ? "in" : ""?>">
             <div class="panel-body">
-                <?=$this->template("helper/area.php", array("name" => "a", "excludeBricks" => array("accordion")))?>
+                <?=$this->template("helper/areablock.php", array("name" => "a", "excludeBricks" => array("accordion")))?>
             </div>
         </div>
     </div>

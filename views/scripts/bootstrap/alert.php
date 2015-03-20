@@ -31,5 +31,5 @@
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <? } ?>
     
-    <?=$this->template("helper/area.php", array("name" => "a-".$this->brick->getIndex(), "excludeBricks" => array("alert", "panel", "accordion")))?>
+    <?=$this->template("helper/areablock.php", array("name" => "a-".$this->brick->getIndex(), "excludeBricks" => array("alert", "panel", "accordion")))?>
 </div>
