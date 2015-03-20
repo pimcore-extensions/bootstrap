@@ -2,20 +2,20 @@
     <?php
 
     $store = array(
-        array("column_12", "1 Spalte"),
-        array("column_6_6", "2 Spalten (50%)"),
-        array("column_4_4_4", "3 Spalten (33 %)"),
-        array("column_3_3_3_3", "4 Spalten (25%)"),
+        array("column_12", "1 Column"),
+        array("column_6_6", "2 Columns (50%)"),
+        array("column_4_4_4", "3 Columns (33%)"),
+        array("column_3_3_3_3", "4 Columns (25%)"),
 
-        array("column_4_8", "2 Spalten (1/3 und 2/3)"),
-        array("column_8_4", "2 Spalten (2/3 und 1/3)"),
+        array("column_4_8", "2 Columns (1/3 and 2/3)"),
+        array("column_8_4", "2 Columns (2/3 and 1/3)"),
 
-        array("column_3_9", "2 Spalten (1/4 und 3/4)"),
-        array("column_9_3", "2 Spalten (3/4 und 1/4)"),
+        array("column_3_9", "2 Columns (1/4 and 3/4)"),
+        array("column_9_3", "2 Columns (3/4 and 1/4)"),
 
-        array("column_5_2_5", "2 Spalten (5/2/5)"),
-        array("column_2_5_5", "2 Spalten (2/5/5)"),
-        array("column_5_5_2", "2 Spalten (5/5/2)")
+        array("column_5_2_5", "2 Columns (5/2/5)"),
+        array("column_2_5_5", "2 Columns (2/5/5)"),
+        array("column_5_5_2", "2 Columns (5/5/2)")
     );
 
     if ($this->editmode) {
