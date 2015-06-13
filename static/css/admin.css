@@ -2,3 +2,6 @@
 {
     top:-25px!important;
 }
+.pimcore_tag_button .pimcore_edit_link_button {
+    width: auto !important;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- Author: Gabriel Somoza <gabriel@somoza.me> -->
+<zend-config>
+    <id>button</id>
+    <name>Button</name>
+    <description>Bootstrap Button.</description>
+    <version>1.0</version>
+</zend-config>
