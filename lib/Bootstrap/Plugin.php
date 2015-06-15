@@ -1,5 +1,6 @@
 <?php
 
+namespace Bootstrap;
 
 use Bootstrap\Controller\Plugin\ScriptPaths;
 use Pimcore\API\Plugin\AbstractPlugin;

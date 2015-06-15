@@ -1,6 +1,6 @@
 <?php
 
-$excludeBricks = $this->param('excludeBricks', []);
+$excludeBricks = is_array($this->excludeBricks) ? $this->excludeBricks : [];
 $extraBricks = is_array($this->extraBricks) ? $this->extraBricks : [];
 
 $bricks = []; //Projects AreaBricks
