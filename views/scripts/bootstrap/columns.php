@@ -1,5 +1,5 @@
 <div class="row">
-<?
+<?php
 
 $store = array(
     array("column_12", "1 Spalte"),

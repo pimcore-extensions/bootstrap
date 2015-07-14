@@ -1,4 +1,4 @@
-<? 
+<?php
     $image = $this->image($this->name, array("thumbnail" => "contentImage", "class" => "img-responsive"));
 
     if($this->editmode) 

@@ -1,5 +1,5 @@
 
-<? 
+<?php
 
     $childs = array();
     
@@ -28,9 +28,9 @@
 ?>
 
 
-<? foreach($rows as $childs) { ?>
+<?php foreach($rows as $childs) { ?>
     <div class="row">
-    <? foreach ($childs as $asset) { ?>
+    <?php foreach ($childs as $asset) { ?>
         <div class="col-xs-12 col-sm-<?=$type?> col-gallery">
             <div class="image">
                 <a href="<?=$asset->getThumbnail("lightboxImage")?>" class="fancybox" rel="<?=$this->rel?>" title="<?=$asset->getProperty("lightbox_text")?>">
@@ -38,6 +38,6 @@
                 </a>
             </div>
         </div>
-    <? } ?>
+    <?php} ?>
     </div>
-<? } ?>
+<?php} ?>

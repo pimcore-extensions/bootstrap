@@ -27,9 +27,9 @@
 
 <div class="alert <?=$type?> <?=$dismissable ? "alert-dismissable" : ""?>">
     
-    <? if($dismissable) { ?>
+    <?phpif($dismissable) { ?>
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <? } ?>
+    <?php} ?>
     
     <?=$this->template("helper/areablock.php", array("name" => "a-".$this->brick->getIndex(), "excludeBricks" => array("alert", "panel", "accordion")))?>
 </div>

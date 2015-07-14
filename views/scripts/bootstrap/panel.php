@@ -23,11 +23,11 @@
 ?>
 
 <div class="panel <?=$type?>">
-    <? if($type !== "panel-orange") { ?>
+    <?phpif($type !== "panel-orange") { ?>
     <div class="panel-heading">
         <h3 class="panel-title"><?=$this->input("panelHeading")?></h3>
     </div>
-    <? } ?>
+    <?php} ?>
     <div class="panel-body">
         <?=$this->template("helper/areablock.php", array("name" => "panel-" . $this->brick->getIndex(), "params" => array(), "excludeBricks" => array()))?>
     </div>
