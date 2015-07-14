@@ -1,5 +1,5 @@
 <div class="row">
-    <?phpif($this->editmode) { ?>
+    <?php if($this->editmode) { ?>
         <label>Slides:</label>
         <?
             echo $this->numeric("slides", array("reload" => true)); 
@@ -34,24 +34,24 @@
         $randomid = "caoursel-" . rand();
     ?>
     
-    <div id="<?=$randomid?>" <?phpecho $this->editmode ? '' : 'class="carousel slide carousel-fade" data-ride="carousel" data-interval="6500"'?>>
+    <div id="<?=$randomid?>" <?php echo $this->editmode ? '' : 'class="carousel slide carousel-fade" data-ride="carousel" data-interval="6500"'?>>
         <!-- Indicators -->
         <ol class="carousel-indicators <?=$class?>">
-            <?phpfor($i = 0; $i < $slides; $i++) {?>
+            <?php for($i = 0; $i < $slides; $i++) {?>
                 <li data-target="#<?=$randomid?>" data-slide-to="<?=$i?>" class="<?=$i==0 ? "active" : ""?>"></li>
-            <?php} ?>
+            <?php } ?>
         </ol>
     
         <!-- Wrapper for slides -->
         <div class="<?=$this->editmode ? "" : "carousel-inner"?>">
-            <?phpfor($i = 0; $i < $slides; $i++) {?>
+            <?php for($i = 0; $i < $slides; $i++) {?>
             <div class="item clearfix <?=$i==0 ? "active" : ""?>">
-                <?phpif($this->editmode) {?>
+                <?php if($this->editmode) {?>
                     <h2>Slide <?=($i+1)?></h2>
                 <?php} ?>
                 <?= $this->template("helper/areablock.php", array("name" => "s-" . $i, "params" => array("image" => array("class" => "pull-right")))); ?>
             </div>
-            <?php} ?>
+            <?php } ?>
         </div>
     </div>
 </div>

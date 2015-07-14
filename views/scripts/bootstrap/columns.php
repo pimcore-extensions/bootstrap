@@ -28,7 +28,7 @@ if($this->editmode)
     <div class="col-xs-12">
         <?=$this->select("type", array("reload" => true, "store" => $store));?>
     </div>
-    <?
+    <?php
 }
 
 $type = $this->select("type")->getData();
@@ -36,7 +36,7 @@ $type = $this->select("type")->getData();
 if ($type)
 {
     ?>
-    <?
+    <?php
         $type = explode("_", $type);
 
         $type_partial = $type[0];
@@ -50,6 +50,6 @@ if ($type)
 
     ?>
 
-    <?
+    <?php
 } ?>
 </div>

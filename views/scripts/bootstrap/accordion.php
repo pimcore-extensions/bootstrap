@@ -1,4 +1,4 @@
-<?
+<?php
     
     $store = array(
         array("panel-default", "Default"),

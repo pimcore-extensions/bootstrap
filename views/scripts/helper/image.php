@@ -13,13 +13,13 @@
             {
                 ?>
                     <img data-width="<?=$image->getImage()->getWidth()?>" data-height="<?=$image->getImage()->getHeight()?>" data-text="<?=$image->getImage()->getAlt()?>" />
-                <?
+                <?php
             }
             else
             {
                 ?>
                     <img src="debug"/>
-                <?
+                <?php
             }
         } 
         else 

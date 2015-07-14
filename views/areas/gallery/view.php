@@ -1,4 +1,3 @@
-
 <?php
 
     $childs = array();
@@ -38,6 +37,6 @@
                 </a>
             </div>
         </div>
-    <?php} ?>
+    <?php } ?>
     </div>
-<?php} ?>
+<?php } ?>

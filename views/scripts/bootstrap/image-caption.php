@@ -1,4 +1,4 @@
-<?phpif($this->editmode) { ?>
+<?php if($this->editmode) { ?>
     <?=$this->template("bootstrap/content.php")?>
     <?=$this->template("bootstrap/image.php")?>
 <?php} else {?>
@@ -10,4 +10,4 @@
 
     <?=$this->image("contentImage", array("thumbnail" => "contentImage", "class" => "img-responsive pull-right"));?>
 </div>
-<?php} ?>
+<?php } ?>
