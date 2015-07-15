@@ -1,7 +1,7 @@
-<?
+<?php
     if($this->editmode)
     {
-        ?><br/><br/><br/><?
+        ?><br/><br/><br/><?php
     }
     
     $class = $this->input("extraClass")->text;

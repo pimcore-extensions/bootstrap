@@ -1,6 +1,6 @@
 <div>
     <label><?=$this->translate("Spalte")?></label>
-    <?
+    <?php
         $store = array(
             array("12", "1 Spalte"),
             array("6", "2 Spalten (50%)"),
@@ -20,6 +20,6 @@
     <br/>
     <label><?=$this->translate("Bilder oder Ordner")?></label> <?=$this->multihref("images")?>
 </div>
-<?
+<?php
 
 ?>

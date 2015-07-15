@@ -1,4 +1,4 @@
-<?
+<?php
 
     $store = array(
         array("alert-success", "Success"),
@@ -15,9 +15,9 @@
     
         echo $this->select("type", array("reload" => true, "store" => $store));
         
-        ?><br/><?
+        ?><br/><?php
         
-        ?><label>Dismissable</label><?
+        ?><label>Dismissable</label><?php
         echo $this->checkbox("dismissable");
     }
     
@@ -27,9 +27,9 @@
 
 <div class="alert <?=$type?> <?=$dismissable ? "alert-dismissable" : ""?>">
     
-    <? if($dismissable) { ?>
+    <?php if($dismissable) { ?>
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <? } ?>
+    <?php } ?>
     
     <?=$this->template("helper/areablock.php", array("name" => "a-".$this->brick->getIndex(), "excludeBricks" => array("alert", "panel", "accordion")))?>
 </div>
