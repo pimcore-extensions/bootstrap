@@ -1,7 +1,8 @@
 <?php
 
+namespace Bootstrap;
 
-class Bootstrap_IndexController extends Pimcore_Controller_Action_Frontend {
+class IndexController extends \Pimcore\Controller\Action\Frontend {
     
     public function areaAction () 
     {

@@ -35,21 +35,15 @@ $type = $this->select("type")->getData();
 
 if ($type)
 {
-    ?>
-    <?php
-        $type = explode("_", $type);
+    $type = explode("_", $type);
 
-        $type_partial = $type[0];
-        $columns = array_splice($type, 1);
-        
-        $params = array(
-            "columns" => $columns
-        );
+    $type_partial = $type[0];
+    $columns = array_splice($type, 1);
 
-        $this->template("bootstrap/columns/" . $type_partial . ".php", $params);
+    $params = array(
+        "columns" => $columns
+    );
 
-    ?>
-
-    <?php
+    $this->template("bootstrap/columns/" . $type_partial . ".php", $params);
 } ?>
 </div>

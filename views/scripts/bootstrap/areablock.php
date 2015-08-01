@@ -30,10 +30,7 @@
         );
     }
 
-?>
-
-<?php echo $this->areablock("c" . $name, array(
+    echo $this->areablock("c" . $name, array(
         "allowed" => $bricks,
         "params" => $params
     ));
-?>

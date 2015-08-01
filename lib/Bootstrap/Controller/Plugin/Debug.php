@@ -1,6 +1,8 @@
 <?php
 
-class Bootstrap_Controller_Plugin_Debug extends Zend_Controller_Plugin_Abstract {
+namespace Bootstrap\Controller\Plugin;
+
+class Debug extends \Zend_Controller_Plugin_Abstract {
 
     protected $enabled = true;
 
@@ -11,11 +13,11 @@ class Bootstrap_Controller_Plugin_Debug extends Zend_Controller_Plugin_Abstract 
 
     public function dispatchLoopShutdown() 
     {
-        if(!Pimcore_Tool::isHtmlResponse($this->getResponse())) {
+        if(!\Pimcore\Tool::isHtmlResponse($this->getResponse())) {
             return;
         }
 
-        if(!Pimcore::inDebugMode())
+        if(!\Pimcore::inDebugMode())
         {
             return;
         }
@@ -69,7 +71,7 @@ class Bootstrap_Controller_Plugin_Debug extends Zend_Controller_Plugin_Abstract 
         } 
         catch (\Exception $e) 
         {
-            Logger::error($e);
+            \Logger::error($e);
         }
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
+namespace Bootstrap;
 
-class Bootstrap_HelperController extends Pimcore_Controller_Action_Admin {
+class HelperController extends \Pimcore\Controller\Action\Admin {
     
     public function areaAction () 
     {

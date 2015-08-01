@@ -1,7 +1,7 @@
 <div class="row">
     <?php if($this->editmode) { ?>
         <label>Slides:</label>
-        <?
+        <?php
             echo $this->numeric("slides", array("reload" => true)); 
         
             $store = array(
@@ -19,7 +19,7 @@
         ?>
         
         
-    <?php}
+    <?php }
         
         $class = $this->select("class")->getData();
     ?>
@@ -48,7 +48,7 @@
             <div class="item clearfix <?=$i==0 ? "active" : ""?>">
                 <?php if($this->editmode) {?>
                     <h2>Slide <?=($i+1)?></h2>
-                <?php} ?>
+                <?php } ?>
                 <?= $this->template("helper/areablock.php", array("name" => "s-" . $i, "params" => array("image" => array("class" => "pull-right")))); ?>
             </div>
             <?php } ?>
