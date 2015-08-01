@@ -30,7 +30,7 @@ class Action extends Frontend {
 		
         // ... other init code
 
-        $this->view->addScriptPath(PIMCORE_PLUGINS_PATH . '/Bootstrap/views/scripts');
+        \Boostrap\Plugin::onFrontInit($this);
     }
 }
 ```
