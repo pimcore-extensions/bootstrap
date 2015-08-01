@@ -1,1 +1,1 @@
-<?=$this->template("bootstrap/alert.php")?>
+<?= $this->template("bootstrap/alert.php") ?>

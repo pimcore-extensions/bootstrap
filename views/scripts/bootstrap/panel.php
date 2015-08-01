@@ -9,9 +9,9 @@ $store = array(
     array("panel-danger", "Danger")
 );
 
-if($this->editmode) {
-    if($this->select("type")->isEmpty()) {
-         $this->select("type")->setDataFromResource("panel-default");
+if ($this->editmode) {
+    if ($this->select("type")->isEmpty()) {
+        $this->select("type")->setDataFromResource("panel-default");
     }
 
     echo $this->select("type", array("reload" => true, "store" => $store));
@@ -20,11 +20,11 @@ if($this->editmode) {
 $type = $this->select("type")->getData();
 ?>
 
-<div class="panel <?=$type?>">
-    <?php if($type !== "panel-orange") { ?>
-    <div class="panel-heading">
-        <h3 class="panel-title"><?=$this->input("panelHeading")?></h3>
-    </div>
+<div class="panel <?= $type ?>">
+    <?php if ($type !== "panel-orange") { ?>
+        <div class="panel-heading">
+            <h3 class="panel-title"><?= $this->input("panelHeading") ?></h3>
+        </div>
     <?php } ?>
     <div class="panel-body">
         <?=$this->template("helper/areablock.php", array("name" => "panel-" . $this->brick->getIndex(), "params" => array(), "excludeBricks" => array()))?>

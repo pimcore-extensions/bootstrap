@@ -48,14 +48,12 @@ class Plugin extends AbstractPlugin implements PluginInterface
 
         $blockDirs = scandir($respository);
 
-        foreach($blockDirs as $blockDir)
-        {
+        foreach ($blockDirs as $blockDir) {
             if ($blockDir == "." && $blockDir == "..")
                 continue;
 
-            if(is_dir($respository . "/" . $blockDir))
-            {
-                if(is_file($respository . "/" . $blockDir . "/area.xml"))
+            if (is_dir($respository . "/" . $blockDir)) {
+                if (is_file($respository . "/" . $blockDir . "/area.xml"))
                     self::rrmdir(PIMCORE_WEBSITE_VAR . "/areas/" . $blockDir);
             }
         }
@@ -65,18 +63,15 @@ class Plugin extends AbstractPlugin implements PluginInterface
 
     public static function rrmdir($dir)
     {
-        if (is_dir($dir))
-        {
+        if (is_dir($dir)) {
             $objects = scandir($dir);
 
-            foreach ($objects as $object)
-            {
-                if ($object != "." && $object != "..")
-                {
-                    if (filetype($dir."/".$object) == "dir")
+            foreach ($objects as $object) {
+                if ($object != "." && $object != "..") {
+                    if (filetype($dir . "/" . $object) == "dir")
                         self::rrmdir($dir . "/" . $object);
                     else
-                        unlink($dir."/".$object);
+                        unlink($dir . "/" . $object);
                 }
             }
 

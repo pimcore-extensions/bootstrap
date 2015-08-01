@@ -9,7 +9,7 @@ Installation
 Using Composer:  
 
 ```
-composer require pfaffenbauer/bootstrap
+composer require pimcore-extensions/bootstrap
 ```
 
 Composer will automatically copy the area files into your `website/var/areas` directory.

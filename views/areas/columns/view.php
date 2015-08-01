@@ -1,1 +1,1 @@
-<?=$this->template("bootstrap/columns.php")?>
+<?= $this->template("bootstrap/columns.php") ?>

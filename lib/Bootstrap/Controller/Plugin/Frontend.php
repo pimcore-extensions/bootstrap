@@ -2,33 +2,36 @@
 
 namespace Bootstrap\Controller\Plugin;
 
-class Frontend extends \Zend_Controller_Plugin_Abstract {
+class Frontend extends \Zend_Controller_Plugin_Abstract
+{
 
     protected $enabled = true;
 
-    public function disable() {
+    public function disable()
+    {
         $this->enabled = false;
+
         return true;
     }
 
-    public function dispatchLoopShutdown() 
+    public function dispatchLoopShutdown()
     {
-        if(!\Pimcore\Tool::isHtmlResponse($this->getResponse())) {
+        if (!\Pimcore\Tool::isHtmlResponse($this->getResponse())) {
             return;
         }
 
         try {
-            
+
             $body = $this->getResponse()->getBody();
 
             $code = "\n\n\n<!-- Bootstrap Includes -->\n";
 
             $headCode = '';
 
-            
+
             $headEndPosition = stripos($body, "</title>");
-            if($headEndPosition !== false) {
-                $body = substr_replace($body, "\n\n</title>\n".$headCode, $headEndPosition, 7);
+            if ($headEndPosition !== false) {
+                $body = substr_replace($body, "\n\n</title>\n" . $headCode, $headEndPosition, 7);
             }
 
 
@@ -44,9 +47,7 @@ class Frontend extends \Zend_Controller_Plugin_Abstract {
 */
 
             $this->getResponse()->setBody($body);
-        } 
-        catch (\Exception $e) 
-        {
+        } catch (\Exception $e) {
             \Logger::error($e);
         }
     }

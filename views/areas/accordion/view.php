@@ -1,1 +1,1 @@
-<?=$this->template("bootstrap/accordion.php")?>
+<?= $this->template("bootstrap/accordion.php") ?>
