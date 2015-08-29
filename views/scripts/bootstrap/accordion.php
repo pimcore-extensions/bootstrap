@@ -18,23 +18,34 @@ if ($this->editmode) {
 }
 
 $type = $this->select("type")->getData();
+
+$panels = $this->block('panels');
+
+$id = uniqid('accordion-');
 ?>
 
-<div class="panel-group">
-    <div class="panel <?= $type ?>">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="<?= $this->editmode ? "" : "collapse" ?>" data-parent="#accordion"
-                   href="#collapse<?= $this->brick->getId() . $this->brick->getIndex() ?>">
-                    <i class="fa fa-caret-down"></i> <?= $this->input("name") ?>
-                </a>
-            </h4>
-        </div>
-        <div id="collapse<?= $this->brick->getId() . $this->brick->getIndex() ?>"
-             class="panel-collapse collapse <?= $this->editmode ? "in" : "" ?>">
-            <div class="panel-body">
-                <?=$this->template("helper/areablock.php", array("name" => "a", "excludeBricks" => array("accordion")))?>
+<div class="panel-group" id="<?= $id ?>" role="tablist" aria-multiselectable="true">
+    <?php while ($panels->loop()): ?>
+        <div class="panel <?= $type ?>">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" role="button"
+                       data-toggle="<?= $this->editmode ? '' : 'collapse' ?>"
+                       data-parent="#<?= $id ?>"
+                       href="#collapse<?= $this->brick->getId() . $this->brick->getIndex() ?>">
+                        <?= $this->input('name') ?>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse<?= $this->brick->getId() . $this->brick->getIndex() ?>"
+                 class="panel-collapse collapse <?= $this->editmode ? 'in' : '' ?>">
+                <div class="panel-body">
+                    <?= $this->template('helper/areablock.php', [
+                        'name' => 'a',
+                        'excludeBricks' => ['accordion']
+                    ]) ?>
+                </div>
             </div>
         </div>
-    </div>
+    <?php endwhile; ?>
 </div>

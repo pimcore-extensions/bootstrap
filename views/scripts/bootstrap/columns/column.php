@@ -7,7 +7,7 @@ foreach ($this->columns as $column) {
     $name = "cs" . $column . "_" . $i++; ?>
 
     <div class="col-md-<?= $column ?> col-sm-<?= $column ?> col-xs-12">
-        <?= $this->template("helper/area.php", array("name" => $name)) ?>
+        <?= $this->template("helper/areablock.php", array("name" => $name, "excludeBricks" => array("columns"))) ?>
     </div>
 
 <?php } ?>

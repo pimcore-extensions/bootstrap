@@ -1,5 +1,16 @@
 <?php
-$defaultBricks = array("content", "accordion", "columns", "alert", "image", "panel", "carousel", "image-caption", "button");
+$defaultBricks = array(
+    'accordion',
+    'alert',
+    'button',
+    'carousel',
+    'columns',
+    'content',
+    'gallery',
+    'image',
+    'image-caption',
+    'panel',
+);
 $excludeBricks = $this->excludeBricks;
 $extraBricks = $this->extraBricks;
 $name = $this->name;
