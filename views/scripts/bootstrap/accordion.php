@@ -32,12 +32,12 @@ $id = uniqid('accordion-');
                     <a class="accordion-toggle collapsed" role="button"
                        data-toggle="<?= $this->editmode ? '' : 'collapse' ?>"
                        data-parent="#<?= $id ?>"
-                       href="#collapse<?= $this->brick->getId() . $this->brick->getIndex() ?>">
+                       href="#panel-<?= $id ?>-<?= $panels->getCurrentIndex() ?>">
                         <?= $this->input('name') ?>
                     </a>
                 </h4>
             </div>
-            <div id="collapse<?= $this->brick->getId() . $this->brick->getIndex() ?>"
+            <div id="panel-<?= $id ?>-<?= $panels->getCurrentIndex() ?>"
                  class="panel-collapse collapse <?= $this->editmode ? 'in' : '' ?>">
                 <div class="panel-body">
                     <?= $this->template('helper/areablock.php', [
