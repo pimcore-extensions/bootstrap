@@ -3,5 +3,5 @@
     <id>alert</id>
     <name>Alert</name>
     <description>Bootstrap Alert.</description>
-    <version>1.0</version>
+    <version>0.2.0</version>
 </zend-config>

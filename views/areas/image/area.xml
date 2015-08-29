@@ -3,5 +3,5 @@
     <id>image</id>
     <name>Image</name>
     <description>Bootstrap Image.</description>
-    <version>1.0</version>
+    <version>0.2.0</version>
 </zend-config>

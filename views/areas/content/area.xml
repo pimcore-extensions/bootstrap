@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <zend-config>
     <id>content</id>
-    <name>Content</name>
-    <description>Bootstrap Content.</description>
-    <version>1.0</version>
+    <name>WYSIWYG Editor</name>
+    <description>Bootstrap text content.</description>
+    <version>0.2.0</version>
 </zend-config>

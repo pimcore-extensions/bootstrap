@@ -14,9 +14,13 @@
       "email": "dominik@pfaffenbauer.at",
       "homepage": "http://www.pfaffenbauer.at/",
       "role": "Developer"
+    },
+    {
+      "name": "Pimcore Extensions Community",
+      "homepage": "https://github.com/pimcore-extensions/bootstrap/contributors"
     }
   ],
   "require": {
     "pimcore/installer-plugin": ">=1"
   }
-}  
+}

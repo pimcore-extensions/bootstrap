@@ -3,5 +3,5 @@
     <id>accordion</id>
     <name>Accordion</name>
     <description>Bootstrap Accordion.</description>
-    <version>1.0</version>
+    <version>0.2.0</version>
 </zend-config>
