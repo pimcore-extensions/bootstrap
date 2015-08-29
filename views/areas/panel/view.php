@@ -1,1 +1,1 @@
-<?=$this->template("bootstrap/panel.php")?>
+<?= $this->template("bootstrap/panel.php") ?>

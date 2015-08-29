@@ -1,1 +1,1 @@
-<?=$this->template("bootstrap/carousel.php")?>
+<?= $this->template("bootstrap/carousel.php") ?>

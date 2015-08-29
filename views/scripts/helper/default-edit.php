@@ -1,3 +1,3 @@
 <?php
-    echo $this->input("extraClass", array("width" => 500));
+echo $this->input("extraClass", array("width" => 500));
 ?>

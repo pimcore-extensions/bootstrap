@@ -1,32 +1,37 @@
 <?php
 
-class Bootstrap_Controller_Plugin_Frontend extends Zend_Controller_Plugin_Abstract {
+namespace Bootstrap\Controller\Plugin;
+
+class Frontend extends \Zend_Controller_Plugin_Abstract
+{
 
     protected $enabled = true;
 
-    public function disable() {
+    public function disable()
+    {
         $this->enabled = false;
+
         return true;
     }
 
-    public function dispatchLoopShutdown() 
+    public function dispatchLoopShutdown()
     {
-        if(!Pimcore_Tool::isHtmlResponse($this->getResponse())) {
+        if (!\Pimcore\Tool::isHtmlResponse($this->getResponse())) {
             return;
         }
 
         try {
-            
+
             $body = $this->getResponse()->getBody();
 
             $code = "\n\n\n<!-- Bootstrap Includes -->\n";
 
             $headCode = '';
 
-            
+
             $headEndPosition = stripos($body, "</title>");
-            if($headEndPosition !== false) {
-                $body = substr_replace($body, "\n\n</title>\n".$headCode, $headEndPosition, 7);
+            if ($headEndPosition !== false) {
+                $body = substr_replace($body, "\n\n</title>\n" . $headCode, $headEndPosition, 7);
             }
 
 
@@ -42,10 +47,8 @@ class Bootstrap_Controller_Plugin_Frontend extends Zend_Controller_Plugin_Abstra
 */
 
             $this->getResponse()->setBody($body);
-        } 
-        catch (\Exception $e) 
-        {
-            Logger::error($e);
+        } catch (\Exception $e) {
+            \Logger::error($e);
         }
     }
 }

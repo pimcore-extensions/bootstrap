@@ -1,35 +1,32 @@
 <?php
 
+namespace Bootstrap;
 
-class Bootstrap_BootstrapController extends Pimcore_Controller_Action {
-    
-    public function accordionAction () 
+class BootstrapController extends \Pimcore\Controller\Action
+{
+
+    public function accordionAction()
     {
-
     }
-    
-    public function columnsAction () 
+
+    public function columnsAction()
     {
-
     }
-    
-    public function contentAction () 
+
+    public function contentAction()
     {
-
     }
-    
+
     public function imageAction()
     {
-        
     }
-    
-    public function panelAction () 
-    {
 
+    public function panelAction()
+    {
     }
-    
+
     public function alertAction()
     {
-
     }
+
 }
