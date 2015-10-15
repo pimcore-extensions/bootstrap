@@ -10,6 +10,7 @@ $defaultBricks = array(
     'image',
     'image-caption',
     'panel',
+    'snippet',
 );
 $excludeBricks = $this->excludeBricks;
 $extraBricks = $this->extraBricks;

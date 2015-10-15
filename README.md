@@ -12,6 +12,7 @@ Provides Bootstrap-specific areas for your themes.
 * [Image](http://getbootstrap.com/css/#images-responsive)
 * [Image with caption](http://getbootstrap.com/components/#thumbnails-custom-content)
 * [Panel](http://getbootstrap.com/components/#panels)
+* [Snippet](https://www.pimcore.org/wiki/pages/viewpage.action?pageId=14551599)
 * [WYSIWYG Editor (with bootstrap styles configuration)](https://www.pimcore.org/wiki/display/PIMCORE3/WYSIWYG)
 
 ## Installation
