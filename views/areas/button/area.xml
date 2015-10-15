@@ -4,5 +4,5 @@
     <id>button</id>
     <name>Button</name>
     <description>Bootstrap Button.</description>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
 </zend-config>

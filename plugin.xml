@@ -8,7 +8,7 @@
         <pluginDescription><![CDATA[Bootstrap Elements for Pimcore]]></pluginDescription>
 
         <!-- meta data -->
-        <pluginVersion>0.2.0</pluginVersion>
+        <pluginVersion>0.3.0</pluginVersion>
 
         <!-- put in the URL for the plugin configuration eg. /plugin/Bootstrap/admin/index -->
         <pluginIframeSrc></pluginIframeSrc>

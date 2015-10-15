@@ -3,5 +3,5 @@
     <id>panel</id>
     <name>Panel</name>
     <description>Bootstrap Panel.</description>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
 </zend-config>
