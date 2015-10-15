@@ -2,6 +2,18 @@
 
 Provides Bootstrap-specific areas for your themes.
 
+## What's inside
+* [Accordion](http://getbootstrap.com/javascript/#collapse-example-accordion)
+* [Alert](http://getbootstrap.com/javascript/#alerts)
+* [Button](http://getbootstrap.com/css/#buttons)
+* [Carousel](http://getbootstrap.com/javascript/#carousel)
+* [Columns (grid)](http://getbootstrap.com/css/#grid)
+* [Gallery](http://getbootstrap.com/components/#thumbnails)
+* [Image](http://getbootstrap.com/css/#images-responsive)
+* [Image with caption](http://getbootstrap.com/components/#thumbnails-custom-content)
+* [Panel](http://getbootstrap.com/components/#panels)
+* [WYSIWYG Editor (with bootstrap styles configuration)](https://www.pimcore.org/wiki/display/PIMCORE3/WYSIWYG)
+
 ## Installation
 
 Using Composer:
