@@ -4,52 +4,27 @@ namespace Bootstrap\Controller\Plugin;
 
 class Frontend extends \Zend_Controller_Plugin_Abstract
 {
+    /**
+     * @var bool
+     */
+    protected $initialized = false;
 
-    protected $enabled = true;
-
-    public function disable()
+    public function preDispatch()
     {
-        $this->enabled = false;
-
-        return true;
-    }
-
-    public function dispatchLoopShutdown()
-    {
-        if (!\Pimcore\Tool::isHtmlResponse($this->getResponse())) {
+        // preDispatch can be called more than once
+        if ($this->initialized) {
             return;
         }
 
-        try {
+        /** @var \Pimcore\Controller\Action\Helper\ViewRenderer $renderer */
+        $renderer = \Zend_Controller_Action_HelperBroker::getExistingHelper('ViewRenderer');
+        $renderer->initView();
 
-            $body = $this->getResponse()->getBody();
+        /** @var \Pimcore\View $view */
+        $view = $renderer->view;
+        $view->addScriptPath(PIMCORE_PLUGINS_PATH . '/Bootstrap/views/scripts');
 
-            $code = "\n\n\n<!-- Bootstrap Includes -->\n";
-
-            $headCode = '';
-
-
-            $headEndPosition = stripos($body, "</title>");
-            if ($headEndPosition !== false) {
-                $body = substr_replace($body, "\n\n</title>\n" . $headCode, $headEndPosition, 7);
-            }
-
-
-            /*
-
-
-            // search for the end <head> tag, and insert the google analytics code before
-            // this method is much faster than using simple_html_dom and uses less memory
-            $bodyEndPosition = stripos($body, "</body>");
-            if($bodyEndPosition !== false) {
-                $body = substr_replace($body, $code . "\n\n</body>\n", $bodyEndPosition, 7);
-            }
-*/
-
-            $this->getResponse()->setBody($body);
-        } catch (\Exception $e) {
-            \Logger::error($e);
-        }
+        $this->initialized = true;
     }
 }
 
