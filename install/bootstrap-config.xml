@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+  <columnElements>
+    <column_12>1 Column</column_12>
+      <column_6_6>2 Columns (50%)</column_6_6>
+      <column_4_4_4>3 Columns (33%)</column_4_4_4>
+      <column_3_3_3_3>4 Columns (25%)</column_3_3_3_3>
+      <column_4_8>2 Columns (1/3 and 2/3)</column_4_8>
+      <column_8_4>2 Columns (2/3 and 1/3)</column_8_4>
+      <column_3_9>2 Columns (1/4 and 3/4)</column_3_9>
+      <column_9_3>2 Columns (3/4 and 1/4)</column_9_3>
+      <column_5_2_5>2 Columns (5/2/5)</column_5_2_5>
+      <column_2_5_5>2 Columns (2/5/5)</column_2_5_5>
+      <column_5_5_2>2 Columns (5/5/2)</column_5_5_2>
+
+  </columnElements>
+</zend-config>

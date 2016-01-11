@@ -9,8 +9,20 @@ use Pimcore\Controller\Action\Frontend;
 
 class Plugin extends AbstractPlugin implements PluginInterface
 {
+
+    static $configFile = NULL;
+
+    public function __construct( $jsPaths = null, $cssPaths = null ) {
+
+        self::$configFile = PIMCORE_CONFIGURATION_DIRECTORY . "/bootstrap-config.xml";
+
+        parent::__construct($jsPaths, $cssPaths);
+
+    }
+
     public function init()
     {
+
         parent::init();
 
         \Pimcore::getEventManager()->attach('system.startup', function (\Zend_EventManager_Event $e) {
@@ -20,19 +32,29 @@ class Plugin extends AbstractPlugin implements PluginInterface
             // we need to do it through controller plugin in preDispatch()
             $front->registerPlugin(new Controller\Plugin\Frontend());
         });
+
     }
 
     public static function isInstalled()
     {
-        return true;
+        return is_file( self::$configFile );
     }
 
     public static function install()
     {
+        if(!is_file( self::$configFile ) )
+        {
+            copy(PIMCORE_PLUGINS_PATH . '/Bootstrap/install/bootstrap-config.xml', self::$configFile );
+        }
+
     }
 
     public static function uninstall()
     {
+        if(is_file( self::$configFile ))
+        {
+            unlink(self::$configFile);
+        }
     }
 
     /**
