@@ -1,22 +1,18 @@
 <div class="row">
     <?php
 
-    $store = array(
-        array("column_12", "1 Column"),
-        array("column_6_6", "2 Columns (50%)"),
-        array("column_4_4_4", "3 Columns (33%)"),
-        array("column_3_3_3_3", "4 Columns (25%)"),
+    $values = \Bootstrap\Config::getConfig();
+    $valueArray = $values->toArray();
 
-        array("column_4_8", "2 Columns (1/3 and 2/3)"),
-        array("column_8_4", "2 Columns (2/3 and 1/3)"),
+    $store = array();
 
-        array("column_3_9", "2 Columns (1/4 and 3/4)"),
-        array("column_9_3", "2 Columns (3/4 and 1/4)"),
+    if( isset( $valueArray['columnElements'] ) ) {
 
-        array("column_5_2_5", "2 Columns (5/2/5)"),
-        array("column_2_5_5", "2 Columns (2/5/5)"),
-        array("column_5_5_2", "2 Columns (5/5/2)")
-    );
+        foreach( $valueArray['columnElements'] as $key => $value) {
+            $store[] = array($key, $value);
+        }
+
+    }
 
     if ($this->editmode) {
         if ($this->select("type")->isEmpty()) {
